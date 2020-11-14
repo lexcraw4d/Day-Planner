@@ -41,7 +41,7 @@ for (let i = 0; i < timeBlocks.length; i++) {
 
 	//creating times to append to the DOM
 	$('.timeBlocks').append(`
-        <div class="row hour time-block mb-2 border-bottom ${cssClass}">
+        <div class="row hour time-block mb-2 border-bottom ${cssClass}"><style>background-color:#FFC300</style>
             <div class="time col-1">${item.time}</div>
             <div class="input-group mb-3 col-11">
                 <input id="userInput ${item.hour}" type="text" class="form-control" value="${savedText}">
