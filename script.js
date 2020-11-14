@@ -19,10 +19,10 @@ timeBlocks = [
 	{ hour: 15, time: '03:00 PM', value: '' },
 	{ hour: 16, time: '04:00 PM', value: '' },
 	{ hour: 17, time: '05:00 PM', value: '' },
-	{ hour: 18, time: '06:00 PM', value: '' },
-	{ hour: 19, time: '07:00 PM', value: '' },
-	{ hour: 20, time: '08:00 PM', value: '' },
-	{ hour: 21, time: '09:00 PM', value: '' },
+	// { hour: 18, time: '06:00 PM', value: '' },
+	// { hour: 19, time: '07:00 PM', value: '' },
+	// { hour: 20, time: '08:00 PM', value: '' },
+	// { hour: 21, time: '09:00 PM', value: '' },
 ];
 
 // for (let item of timeBlocks) {
@@ -44,7 +44,7 @@ for (let i = 0; i < timeBlocks.length; i++) {
         <div class="row hour time-block mb-2 border-bottom ${cssClass}"><style>background-color:#FFC300</style>
             <div class="time col-1">${item.time}</div>
             <div class="input-group mb-3 col-11">
-                <input id="userInput ${item.hour}" type="text" class="form-control" value="${savedText}">
+                <input id="userInput-${item.hour}" type="text" class="form-control" value="${savedText}">
                 <button class="btn btn-outline-secondary ml-2" type="button" id="button-addon2" onclick="save(${item.hour})">
                     <i class="fa fa-save" style="font-size:20px"></i>
                 </button>
@@ -62,7 +62,8 @@ function clearAll() {
 	for (const item of timeBlocks) {
 		document.getElementById(`userInput-${item.hour}`).value = '';
 		localStorage.removeItem(`saveSchedule-${item.hour}`);
-	}
+    }
+save();
 }
 
 // schedule.sortable(); --- future option maybe make event entries "movable"

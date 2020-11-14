@@ -1,15 +1,19 @@
+
 body {
-	background-color: #FF5733;
+    background-color:#e08257
 }
+
 .jumbotron {
+    background-color:#8aaf8f;
 	text-align: center;
-	background-color: #C70039;
-	color:#DAF7A6;
+	color:#305e65;
 	border-radius: 50px;
-    border-bottom: 10px solid #900C3F;
-    opacity:50%
+    border-bottom: 10px solid #e7dd9b;
+    
+    
     
 }
+
 
 #fontChange {
     font-family: 'Lobster', cursive
@@ -18,9 +22,10 @@ body {
 .btn{
     display: flex;
     justify-content: center;
-    margin-left: 480px;
-    background-color:#900C3F;
+    /* margin-left: 480px; */
+    background-color: #1b2841;
     color:whitesmoke;
+    opacity:80%;
 }
 .past {
 	background-color: #d3d3d3;
@@ -29,16 +34,18 @@ body {
 
 
 .hour {
-	color: #C70039;
+	color: #1b2841;
 	justify-content: center;
 	align-content: center;
     padding: 8px 14px;
-    background-color: #DAF7A6;
+    background-color: #e7dd9b;
     border-radius: 5px;
     font-size: medium;
 }
 
 .time {
+    display: flex;
+    min-width:50px ;
     font-size: 14px;
     font-weight: 600;
     padding-top: 12px;
