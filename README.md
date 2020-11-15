@@ -10,14 +10,14 @@
 The daily planner was created for the user to add tasks to their busy work-day schedule. The planner color coordinates the user's schedule so that past time displays in gray, the present hour displays in red, and future time displays in green. The planner also features local storage so that the users events are saved to be referenced in the future. The planner contains a clear button, which allows the user to reset their schedule each new day. The current date and time is displayed in real time using [Moment](momentjs.com).
 
 This source code is available to everyone under the standard [MIT License](https://github.com/microsoft/vscode/blob/master/LICENSE.txt).
-![finished planner product](assets\plannerpic.JPG)
+![Scheduler](assets/plannerpic.JPG)
 
 # Installation
 To install please visit [my repository](https://github.com/lexcraw4d/Day-Planner) and look at the uploaded files via GitHub Deployment.
 
 # Usage
 ##### Visual Studio Code
-![Visual Studio Code](\assets\VSC.jpg)
+![VS code](assets/VSC.jpg)
 Visual Studio Code (VS) was used to edit and improve the functionality of the given Password Generator. 
 
 [Visual Studio Code](https://code.visualstudio.com/) is an lightning fast FREE open-source editor designed by [Microsoft](https://www.microsoft.com/en-us/) with developers in mind. Visual Studio code allows developers to easily apply the edit-build-debug cycle, resulting in more productivity on your ideas.
@@ -29,7 +29,7 @@ Visual Studio Code (VS) was used to edit and improve the functionality of the gi
 
 In order to make effective changes to the website both [Git](https://gitforwindows.org/) and [GitHub](https://github.com/) were used in synchronization to push commits of the latest updated version. 
 
-![Git](assets\githubgitbash.png)
+![git](assets/githubgitbash.png)
 
 
 Git is version control system which allows multiple users to make changes to one single repository.
