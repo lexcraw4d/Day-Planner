@@ -6,8 +6,7 @@ function displayTime() {
 	setInterval(displayTime, 1000);
 }
 displayTime();
-
-//Created object to hold time values based on military time
+//Created object to hold hour time values based on military time
 timeBlocks = [
 	{ hour: 8, time: '08:00 AM', value: '' },
 	{ hour: 9, time: '09:00 AM', value: '' },
@@ -19,17 +18,16 @@ timeBlocks = [
 	{ hour: 15, time: '03:00 PM', value: '' },
 	{ hour: 16, time: '04:00 PM', value: '' },
 	{ hour: 17, time: '05:00 PM', value: '' },
+	//Option to extend time until 9P<
 	// { hour: 18, time: '06:00 PM', value: '' },
 	// { hour: 19, time: '07:00 PM', value: '' },
 	// { hour: 20, time: '08:00 PM', value: '' },
 	// { hour: 21, time: '09:00 PM', value: '' },
 ];
-
-// for (let item of timeBlocks) {
+// started the for loop at 9 so the data-time can be set starting at 8 then renders up to 17 (5PM)
 for (let i = 0; i < timeBlocks.length; i++) {
-	// started the for loop at 9 so the data-time can be set starting at 8 then renders up to 17 (5PM)
 	let item = timeBlocks[i];
-
+	//Compare time to past,present,future
 	const currentHour = new Date().getHours();
 	const cssClass =
 		currentHour > item.hour
@@ -39,7 +37,7 @@ for (let i = 0; i < timeBlocks.length; i++) {
 			: 'future';
 	const savedText = localStorage.getItem(`saveSchedule-${item.hour}`) || '';
 
-	//creating times to append to the DOM
+	//Creating schedule elements via JS to append to the DOM
 	$('.timeBlocks').append(`
         <div class="row hour time-block mb-2 border-bottom ${cssClass}"><style>background-color:#FFC300</style>
             <div class="time col-1">${item.time}</div>
@@ -53,7 +51,7 @@ for (let i = 0; i < timeBlocks.length; i++) {
     `);
 }
 
-
+//Local Storage
 function save(hour) {
 	const value = document.getElementById(`userInput-${hour}`).value || '';
 	localStorage.setItem(`saveSchedule-${hour}`, value);
@@ -63,8 +61,9 @@ function clearAll() {
 	for (const item of timeBlocks) {
 		document.getElementById(`userInput-${item.hour}`).value = '';
 		localStorage.removeItem(`saveSchedule-${item.hour}`);
-    }
-save();
+	}
+	save();
 }
 
-// schedule.sortable(); --- future option maybe make event entries "movable"
+//Future Addition possibilities:
+//schedule.sortable(); ---  option to maybe make event entries "movable"
