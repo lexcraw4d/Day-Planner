@@ -53,6 +53,7 @@ for (let i = 0; i < timeBlocks.length; i++) {
     `);
 }
 
+
 function save(hour) {
 	const value = document.getElementById(`userInput-${hour}`).value || '';
 	localStorage.setItem(`saveSchedule-${hour}`, value);
